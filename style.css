@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+    min-height:100vh;
+
+}
+
+/* ===================== */
+
+.container{
+
+    width:100%;
+    padding:35px;
+
+}
+
+/* ===================== */
+
+.top-bar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.top-bar h1{
+
+    color:white;
+    font-size:40px;
+
+}
+
+.right{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+#timer{
+
+    background:white;
+    color:#3b82f6;
+    padding:12px 25px;
+    border-radius:30px;
+    font-size:20px;
+    font-weight:bold;
+
+}
+
+#themeBtn{
+
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:22px;
+
+}
+
+/* ===================== */
+
+.quiz-box{
+
+    width:70%;
+    margin:60px auto;
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+#question{
+
+    font-size:32px;
+    margin-bottom:35px;
+
+}
+
+/* ===================== */
+
+.options{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+
+}
+
+.option{
+
+    padding:18px;
+    border:none;
+    border-radius:12px;
+    background:#f2f2f2;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+
+}
+
+.option:hover{
+
+    background:#3b82f6;
+    color:white;
+
+}
+
+.selected{
+
+    background:#22c55e;
+    color:white;
+
+}
+
+/* ===================== */
+
+#nextBtn{
+
+    display:block;
+    width:220px;
+    margin:40px auto 0;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#0edea3;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+
+}
+
+#nextBtn:hover{
+
+    background:#27b089;
+
+}
+/* ===================== */
+
+.dark{
+
+    background:#111827;
+
+}
+
+.dark .quiz-box{
+
+    background:#1f2937;
+    color:white;
+
+}
+
+.dark .option{
+
+    background:#374151;
+    color:white;
+
+}
+
+.dark .option:hover{
+
+    background:#2563eb;
+
+}
+
+.dark #timer{
+
+    background:#374151;
+    color:white;
+
+}
