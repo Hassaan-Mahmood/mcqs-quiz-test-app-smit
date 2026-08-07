@@ -50,22 +50,25 @@ function quiz() {
     question.innerHTML = obj;
     for (let i = 0; i < allQuestions.length - 1; i++) {
       var item = allQuestions[count].options[i];
-      choices.innerHTML += `<button class="option">${item}</button>`;
+      choices.innerHTML += `<button onclick="userOption(${count})" class="option">${item}</button>`;
     }
   } else {
     // alert("Quiz completed");
     choices.innerHTML = "";
     questionCount.innerHTML = "";
     question.innerHTML = "";
-    nextBtn.innerHTML = `Finished`
+    nextBtn.innerHTML = `Finished`;
   }
 }
 
 function next() {
   count++;
   quiz();
-  console.log(count);
-  console.log(allQuestions.length);
+}
+
+function userOption(index) {
+  console.log(allQuestions[count].options)
+  console.log(index);
 }
 
 quiz();
