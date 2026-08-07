@@ -67,8 +67,14 @@ function next() {
 }
 
 function userOption(index) {
-  console.log(allQuestions[count].options)
-  console.log(index);
+  var answers = allQuestions[count].options;
+  for (let i = 0; i < answers.length; i++) {
+    var answer = answers[i];
+    console.log(answer);
+  }
+  // if (answers === "Islamabad"){
+  // console.log("Hello");
+  //}
 }
 
 quiz();
