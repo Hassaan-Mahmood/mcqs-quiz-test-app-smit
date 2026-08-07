@@ -70,11 +70,14 @@ function userOption(index) {
   var answers = allQuestions[count].options;
   for (let i = 0; i < answers.length; i++) {
     var answer = answers[i];
-    console.log(answer);
+    if (answer === "Islamabad") {
+      console.log("correct");
+    }
+    // else {
+    //   console.log("incorrect");
+    // }
+    // console.log(answer);
   }
-  // if (answers === "Islamabad"){
-  // console.log("Hello");
-  //}
 }
 
 quiz();
