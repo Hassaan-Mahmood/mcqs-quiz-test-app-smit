@@ -36,36 +36,58 @@ var allQuestions = [
   },
 ];
 
+var qsCount = document.getElementById("questionCount");
 var question = document.getElementById("question");
 var choices = document.getElementById("choices");
-var questionCount = document.getElementById("questionCount");
 var nextBtn = document.getElementById("nextBtn");
 var count = 0;
+var isSelected = false;
+var oneOption = true;
+var passCount = 0;
+var failCount = 0;
 
 function quiz() {
+  choices.innerHTML = ``;
   if (count < allQuestions.length) {
-    choices.innerHTML = "";
-    questionCount.innerHTML = `Question ${count + 1} / ${allQuestions.length}`;
-    var obj = allQuestions[count].question;
-    question.innerHTML = obj;
-    for (let i = 0; i < allQuestions.length - 1; i++) {
-      var item = allQuestions[count].options[i];
-      choices.innerHTML += `<button class="option">${item}</button>`;
-    }
+    qsCount.innerHTML = `Questions ${count + 1}/${allQuestions.length}`;
+    question.innerHTML = allQuestions[count].question;
   } else {
-    // alert("Quiz completed");
-    choices.innerHTML = "";
-    questionCount.innerHTML = "";
-    question.innerHTML = "";
-    nextBtn.innerHTML = `Finished`
+    alert("Quiz has been completed");
+  }
+
+  var obj = allQuestions[count].options;
+  for (let i = 0; i < obj.length; i++) {
+    var item = obj[i];
+    choices.innerHTML += `<button class="option" onclick="select('${item}',this)">${item}</button>`;
   }
 }
 
 function next() {
-  count++;
+  if (isSelected === true) {
+    count++;
+    quiz();
+  } else {
+    alert("Please select an option!");
+  }
+
+  isSelected = false;
+}
+
+function select(index, tag) {
+  isSelected = true;
+  var objAnswer = allQuestions[count].answer;
+  if (index === objAnswer) {
+    passCount++;
+  } else {
+    failCount++;
+  }
+  console.log(passCount);
+  console.log(failCount);
+
   quiz();
-  console.log(count);
-  console.log(allQuestions.length);
+
+  tag.style.backgroundColor = "#3b82f6";
+  tag.style.color = "#fff";
 }
 
 quiz();
