@@ -3,35 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>MCQ Quiz App</title>
+
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="container">
+      <!-- ================= TOP BAR ================= -->
       <div class="top-bar">
         <h1>MCQs Quiz</h1>
+
         <div class="right">
+          <!-- Theme Change Button -->
           <button id="themeBtn">🌙</button>
-          <div id="timer">00:15</div>
+
+          <!-- Quiz Timer -->
+          <div id="timer">01:00</div>
         </div>
       </div>
 
+      <!-- ================= QUIZ BOX ================= -->
       <div class="quiz-box">
+        <!-- Question Counter -->
         <div id="questionCount"></div>
-        <h2 id="question">
-          <!-- What does HTML stand for? -->
-        </h2>
-        <div class="options" id="choices">
-          <!-- <button class="option">Option 1</button>
-            <button class="option">Option 2</button>
-            <button class="option">Option 3</button>
-            <button class="option">Option 4</button> -->
-          
-        </div>
-        <button id="nextBtn" onclick="next()">Next →</button>
+
+        <!-- Question -->
+        <h2 id="question"></h2>
+
+        <!-- Options will be created using JavaScript -->
+        <div class="options" id="options"></div>
+        <!-- Next Button -->
+        <button id="nextBtn" onclick="next()">Next</button>
       </div>
     </div>
 
+    <!-- JavaScript File -->
     <script src="app.js"></script>
   </body>
 </html>

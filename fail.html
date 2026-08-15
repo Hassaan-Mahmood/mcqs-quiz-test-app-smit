@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Quiz Result - Failed</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="result-body fail-page">
+    <main class="sheet">
+      <!-- Top decorative line -->
+      <div class="sheet__rule sheet__rule--top"></div>
+
+      <!-- ================= HEADER ================= -->
+
+      <header class="sheet-header">
+        <span class="eyebrow"> Quiz Results </span>
+
+        <div class="stamp stamp--fail">Not Yet</div>
+      </header>
+
+      <!-- ================= SCORE ================= -->
+
+      <section class="score-block">
+        <div class="score-ring" id="scoreRing" style="--pct: 0">
+          <div class="score-ring__inner">
+            <span class="score-value">
+              <span id="percentageScore">0</span>
+              <span class="score-unit">%</span>
+            </span>
+
+            <span class="score-label"> score </span>
+          </div>
+        </div>
+
+        <!-- Result Statistics -->
+
+        <dl class="stat-list">
+          <div class="stat">
+            <dt>Correct</dt>
+
+            <dd>
+              <span id="correct">0</span>
+              /
+              <span id="total">0</span>
+            </dd>
+          </div>
+
+          <div class="stat">
+            <dt>Wrong</dt>
+
+            <dd id="wrong">0</dd>
+          </div>
+
+          <div class="stat">
+            <dt>Pass mark</dt>
+
+            <dd id="percentage">0</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- ================= BUTTON ================= -->
+
+      <div class="actions">
+        <button class="btn btn--primary" onclick="retryQuiz()">
+          Retry Quiz
+        </button>
+      </div>
+
+      <!-- Bottom decorative line -->
+      <div class="sheet__rule sheet__rule--bottom"></div>
+    </main>
+
+
+     <script>
+      var dataCorrect = Number(localStorage.getItem("correctAnswers"));
+      var dataWrong = Number(localStorage.getItem("wrongAnswers"));
+      var dataPercentage = Number(localStorage.getItem("percentage"));
+      var dataTotal = Number(localStorage.getItem("totalQuestions"));
+
+      var correct = document.getElementById("correct");
+      var wrong = document.getElementById("wrong");
+      var percentage = document.getElementById("percentage");
+      var percentageScore = document.getElementById("percentageScore");
+      var total = document.getElementById("total");
+
+      correct.innerHTML = dataCorrect;
+      wrong.innerHTML = dataWrong;
+      percentage.innerHTML = dataPercentage + "%";
+      percentageScore.innerHTML = dataPercentage;
+      total.innerHTML = dataTotal;
+    </script>
+  </body>
+</html>
+
+    <!-- <script>
+      // Get result saved by app.js
+
+      var correct = Number(localStorage.getItem("correctAnswers"));
+
+      var wrong = Number(localStorage.getItem("wrongAnswers"));
+
+      var percentage = Number(localStorage.getItem("percentage"));
+
+      var total = Number(localStorage.getItem("totalQuestions"));
+
+      // Display the final result
+
+      document.getElementById("correct").innerHTML = correct;
+
+      document.getElementById("wrong").innerHTML = wrong;
+
+      document.getElementById("total").innerHTML = total;
+
+      document.getElementById("percentage").innerHTML = percentage;
+
+      // Update the circular percentage
+
+      document
+        .getElementById("scoreRing")
+        .style.setProperty("--pct", percentage);
+
+      // Start quiz again
+
+      function retryQuiz() {
+        // Remove old result
+        localStorage.clear();
+
+        // Go back to quiz
+        window.location.href = "index.html";
+      }
+    </script> -->
+
