@@ -84,7 +84,7 @@ var isSelected = false;
 var selectedText = "";
 var passCount = 0;
 var failCount = 0;
-var timeLeft = 30;
+var timeLeft = 10;
 var interval;
 
 function quiz() {
