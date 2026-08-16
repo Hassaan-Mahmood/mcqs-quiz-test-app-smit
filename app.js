@@ -4,38 +4,32 @@ var allQuestions = [
     options: ["Joule", "Newton", "Watt", "Pascal"],
     answer: "Newton",
   },
-
   {
     question: "What is the SI unit of mass?",
     options: ["Gram", "Kilogram", "Newton", "Pound"],
     answer: "Kilogram",
   },
-
   {
     question: "What force pulls objects toward the Earth?",
     options: ["Friction", "Magnetic force", "Gravity", "Electric force"],
     answer: "Gravity",
   },
-
   {
     question:
       "What is the approximate value of acceleration due to gravity on Earth?",
     options: ["5.8 m/s²", "9.8 m/s²", "15 m/s²", "20 m/s²"],
     answer: "9.8 m/s²",
   },
-
   {
     question: "Which instrument is used to measure temperature?",
     options: ["Barometer", "Thermometer", "Ammeter", "Voltmeter"],
     answer: "Thermometer",
   },
-
   {
     question: "What is the SI unit of power?",
     options: ["Joule", "Watt", "Newton", "Volt"],
     answer: "Watt",
   },
-
   {
     question: "Which type of energy does a moving object have?",
     options: [
@@ -46,7 +40,6 @@ var allQuestions = [
     ],
     answer: "Kinetic energy",
   },
-
   {
     question:
       "Which type of energy is stored in an object due to its position?",
@@ -58,13 +51,11 @@ var allQuestions = [
     ],
     answer: "Potential energy",
   },
-
   {
     question: "What is the speed of light in a vacuum approximately?",
     options: ["3 × 10⁶ m/s", "3 × 10⁸ m/s", "3 × 10¹⁰ m/s", "3 × 10⁴ m/s"],
     answer: "3 × 10⁸ m/s",
   },
-
   {
     question: "Which form of energy is produced by a vibrating object?",
     options: ["Light", "Sound", "Chemical", "Nuclear"],
@@ -117,7 +108,6 @@ function select(e) {
   } else {
     failCount++;
   }
-
   quiz();
 }
 
@@ -148,12 +138,13 @@ function finishQuiz() {
 
 function timeUp() {
   var percentage = Math.round((passCount / allQuestions.length) * 100);
-
   clearInterval(interval);
+
   localStorage.setItem("correctAnswers", passCount);
   localStorage.setItem("wrongAnswers", failCount);
   localStorage.setItem("totalQuestions", allQuestions.length);
   localStorage.setItem("percentage", percentage);
+
   if (percentage >= 70) {
     alert("Time Up");
     window.location.replace("pass.html");
@@ -161,7 +152,6 @@ function timeUp() {
     alert("Time up try next time");
     window.location.replace("fail.html");
   }
-  console.log(percentage);
 }
 
 function startTimer() {
