@@ -26,7 +26,7 @@
       <!-- ================= SCORE ================= -->
 
       <section class="score-block">
-        <div class="score-ring" id="scoreRing" style="--pct: 0">
+        <div class="score-ring" id="scoreRing" style="--ring: 0">
           <div class="score-ring__inner">
             <span class="score-value">
               <span id="percentageScore">0</span>
@@ -107,13 +107,4 @@
         .getElementById("scoreRing")
         .style.setProperty("--pct", percentage);
 
-      // Start quiz again
-
-      function retryQuiz() {
-        // Clear old result
-        localStorage.clear();
-
-        // Go back to quiz
-        window.location.href = "index.html";
-      }
     </script> -->

@@ -26,7 +26,7 @@
       <!-- ================= SCORE ================= -->
 
       <section class="score-block">
-        <div class="score-ring" id="scoreRing" style="--pct: 0">
+        <div class="score-ring" id="scoreRing" style="--ring: 0">
           <div class="score-ring__inner">
             <span class="score-value">
               <span id="percentageScore">0</span>
@@ -96,6 +96,10 @@
 
         window.location.href = "index.html";
       }
+
+      var ring = document.getElementById("scoreRing");
+      // .style = '--ring: ${percentage}'
+      console.log(ring.style = '--ring: ${}');
     </script>
   </body>
 </html>
