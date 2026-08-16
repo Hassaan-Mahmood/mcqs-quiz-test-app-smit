@@ -31,18 +31,6 @@ var allQuestions = [
   },
 
   {
-    question: "Which instrument is used to measure electric current?",
-    options: ["Voltmeter", "Ammeter", "Barometer", "Thermometer"],
-    answer: "Ammeter",
-  },
-
-  {
-    question: "What is the SI unit of energy?",
-    options: ["Newton", "Watt", "Joule", "Pascal"],
-    answer: "Joule",
-  },
-
-  {
     question: "What is the SI unit of power?",
     options: ["Joule", "Watt", "Newton", "Volt"],
     answer: "Watt",
@@ -71,35 +59,17 @@ var allQuestions = [
     answer: "Potential energy",
   },
 
-  // {
-  //   question: "What is the speed of light in a vacuum approximately?",
-  //   options: ["3 × 10⁶ m/s", "3 × 10⁸ m/s", "3 × 10¹⁰ m/s", "3 × 10⁴ m/s"],
-  //   answer: "3 × 10⁸ m/s",
-  // },
+  {
+    question: "What is the speed of light in a vacuum approximately?",
+    options: ["3 × 10⁶ m/s", "3 × 10⁸ m/s", "3 × 10¹⁰ m/s", "3 × 10⁴ m/s"],
+    answer: "3 × 10⁸ m/s",
+  },
 
-  // {
-  //   question: "Which form of energy is produced by a vibrating object?",
-  //   options: ["Light", "Sound", "Chemical", "Nuclear"],
-  //   answer: "Sound",
-  // },
-
-  // {
-  //   question: "Which force opposes the motion of an object?",
-  //   options: ["Gravity", "Friction", "Magnetic force", "Buoyant force"],
-  //   answer: "Friction",
-  // },
-
-  // {
-  //   question: "What is the SI unit of electric current?",
-  //   options: ["Volt", "Ohm", "Ampere", "Watt"],
-  //   answer: "Ampere",
-  // },
-
-  // {
-  //   question: "What is the SI unit of voltage?",
-  //   options: ["Ampere", "Volt", "Ohm", "Watt"],
-  //   answer: "Volt",
-  // },
+  {
+    question: "Which form of energy is produced by a vibrating object?",
+    options: ["Light", "Sound", "Chemical", "Nuclear"],
+    answer: "Sound",
+  },
 ];
 
 var questionCount = document.getElementById("questionCount");
@@ -114,7 +84,6 @@ var isSelected = false;
 var selectedText = "";
 var passCount = 0;
 var failCount = 0;
-// var timeLeft = 60 + 60;
 var timeLeft = 30;
 var interval;
 
