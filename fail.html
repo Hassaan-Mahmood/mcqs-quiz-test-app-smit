@@ -76,29 +76,31 @@
       <div class="sheet__rule sheet__rule--bottom"></div>
     </main>
 
+    <script>
+      var correct = Number(localStorage.getItem("correctAnswers"));
+      var wrong = Number(localStorage.getItem("wrongAnswers"));
+      var percentage = Number(localStorage.getItem("percentage"));
+      var total = Number(localStorage.getItem("totalQuestions"));
 
-     <script>
-      var dataCorrect = Number(localStorage.getItem("correctAnswers"));
-      var dataWrong = Number(localStorage.getItem("wrongAnswers"));
-      var dataPercentage = Number(localStorage.getItem("percentage"));
-      var dataTotal = Number(localStorage.getItem("totalQuestions"));
+      document.getElementById("correct").innerHTML = correct;
+      document.getElementById("wrong").innerHTML = wrong;
+      document.getElementById("percentage").innerHTML = percentage + "%";
+      document.getElementById("percentageScore").innerHTML = percentage;
+      document.getElementById("total").innerHTML = total;
 
-      var correct = document.getElementById("correct");
-      var wrong = document.getElementById("wrong");
-      var percentage = document.getElementById("percentage");
-      var percentageScore = document.getElementById("percentageScore");
-      var total = document.getElementById("total");
+      function retryQuiz() {
+        localStorage.removeItem("correctAnswers");
+        localStorage.removeItem("wrongAnswers");
+        localStorage.removeItem("totalQuestions");
+        localStorage.removeItem("percentage");
 
-      correct.innerHTML = dataCorrect;
-      wrong.innerHTML = dataWrong;
-      percentage.innerHTML = dataPercentage + "%";
-      percentageScore.innerHTML = dataPercentage;
-      total.innerHTML = dataTotal;
+        window.location.href = "index.html";
+      }
     </script>
   </body>
 </html>
 
-    <!-- <script>
+<!-- <script>
       // Get result saved by app.js
 
       var correct = Number(localStorage.getItem("correctAnswers"));
@@ -135,4 +137,3 @@
         window.location.href = "index.html";
       }
     </script> -->
-

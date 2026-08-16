@@ -71,35 +71,35 @@ var allQuestions = [
     answer: "Potential energy",
   },
 
-  {
-    question: "What is the speed of light in a vacuum approximately?",
-    options: ["3 × 10⁶ m/s", "3 × 10⁸ m/s", "3 × 10¹⁰ m/s", "3 × 10⁴ m/s"],
-    answer: "3 × 10⁸ m/s",
-  },
+  // {
+  //   question: "What is the speed of light in a vacuum approximately?",
+  //   options: ["3 × 10⁶ m/s", "3 × 10⁸ m/s", "3 × 10¹⁰ m/s", "3 × 10⁴ m/s"],
+  //   answer: "3 × 10⁸ m/s",
+  // },
 
-  {
-    question: "Which form of energy is produced by a vibrating object?",
-    options: ["Light", "Sound", "Chemical", "Nuclear"],
-    answer: "Sound",
-  },
+  // {
+  //   question: "Which form of energy is produced by a vibrating object?",
+  //   options: ["Light", "Sound", "Chemical", "Nuclear"],
+  //   answer: "Sound",
+  // },
 
-  {
-    question: "Which force opposes the motion of an object?",
-    options: ["Gravity", "Friction", "Magnetic force", "Buoyant force"],
-    answer: "Friction",
-  },
+  // {
+  //   question: "Which force opposes the motion of an object?",
+  //   options: ["Gravity", "Friction", "Magnetic force", "Buoyant force"],
+  //   answer: "Friction",
+  // },
 
-  {
-    question: "What is the SI unit of electric current?",
-    options: ["Volt", "Ohm", "Ampere", "Watt"],
-    answer: "Ampere",
-  },
+  // {
+  //   question: "What is the SI unit of electric current?",
+  //   options: ["Volt", "Ohm", "Ampere", "Watt"],
+  //   answer: "Ampere",
+  // },
 
-  {
-    question: "What is the SI unit of voltage?",
-    options: ["Ampere", "Volt", "Ohm", "Watt"],
-    answer: "Volt",
-  },
+  // {
+  //   question: "What is the SI unit of voltage?",
+  //   options: ["Ampere", "Volt", "Ohm", "Watt"],
+  //   answer: "Volt",
+  // },
 ];
 
 var questionCount = document.getElementById("questionCount");
@@ -115,7 +115,7 @@ var selectedText = "";
 var passCount = 0;
 var failCount = 0;
 // var timeLeft = 60 + 60;
-var timeLeft = 10;
+var timeLeft = 30;
 var interval;
 
 function quiz() {
@@ -230,23 +230,9 @@ quiz();
 
 themeBtn.onclick = function () {
   body.classList.toggle("dark");
+  if (body.className === "dark") {
+    themeBtn.innerHTML = "☀️";
+  } else {
+    themeBtn.innerHTML = "🌙";
+  }
 };
-
-
-
-
-// =====================================================
-// THEME CHANGE
-// =====================================================
-
-// themeBtn.onclick = function () {
-//   // Toggle dark class on body
-//   document.body.classList.toggle("dark");
-
-//   // Change button icon
-//   if (document.body.classList.contains("dark")) {
-//     themeBtn.innerHTML = "☀️";
-//   } else {
-//     themeBtn.innerHTML = "🌙";
-//   }
-// };
