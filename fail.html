@@ -98,8 +98,7 @@
       }
 
       var ring = document.getElementById("scoreRing");
-      // .style = '--ring: ${percentage}'
-      console.log(ring.style = '--ring: ${}');
+      ring.style.setProperty("--ring", percentage);
     </script>
   </body>
 </html>
